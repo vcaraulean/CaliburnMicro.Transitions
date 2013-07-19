@@ -19,15 +19,24 @@ namespace CaliburnMicro.Transitions
 
 		public async void StartTransitions()
 		{
+			if (Zone1 != null)
+			{
+				Zone1 = null;
+				Zone2 = null;
+				Zone3 = null;
+				Zone4 = null;
+				await Task.Delay(2000);
+			}
+
 			Zone1 = zoneCreator();
 			Zone1.ZoneNumber = 1;
-			await Task.Delay(1200);
+			await Task.Delay(700);
 			Zone2 = zoneCreator();
 			Zone2.ZoneNumber = 2;
-			await Task.Delay(1200);
+			await Task.Delay(700);
 			Zone3 = zoneCreator();
 			Zone3.ZoneNumber = 3;
-			await Task.Delay(1200);
+			await Task.Delay(700);
 			Zone4 = zoneCreator();
 			Zone4.ZoneNumber = 4;
 		}

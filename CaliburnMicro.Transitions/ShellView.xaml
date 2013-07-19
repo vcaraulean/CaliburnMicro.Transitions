@@ -1,7 +1,7 @@
-<controls:MetroWindow x:Class="CaliburnMicro.Transitions.ShellView"
-					  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-					  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-					  xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro">
+<mahApps:MetroWindow x:Class="CaliburnMicro.Transitions.ShellView"
+					 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					 xmlns:mahApps="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
@@ -13,7 +13,7 @@
 			</ResourceDictionary.MergedDictionaries>
 
 			<Color x:Key="AccentColor">#B27A12</Color>
-			
+
 		</ResourceDictionary>
 	</Window.Resources>
 
@@ -40,12 +40,13 @@
 					<Run Text="TransitioningContentControl" />
 					</TextBlock>
 				</Border>
-				<Button Margin="0 30" Background="Orange"
+				<Button Margin="0 30"
+						Background="Orange"
 						Foreground="White"
 						FontSize="15"
 						FontWeight="Light"
-						Content="Show transitions!" 
-						x:Name="StartTransitions"/>
+						Content="Show transitions!"
+						x:Name="StartTransitions" />
 			</StackPanel>
 			<Grid Grid.Column="2">
 				<Grid.ColumnDefinitions>
@@ -59,15 +60,18 @@
 					<RowDefinition />
 				</Grid.RowDefinitions>
 
-				<ContentControl x:Name="Zone1" />
-				<ContentControl x:Name="Zone2"
-								Grid.Column="2" />
-				<ContentControl x:Name="Zone3"
-								Grid.Row="2" />
-				<ContentControl x:Name="Zone4"
-								Grid.Row="2"
-								Grid.Column="2" />
+				<mahApps:TransitioningContentControl x:Name="Zone1" />
+				<mahApps:TransitioningContentControl x:Name="Zone2"
+													 Transition="DownTransition"
+													 Grid.Column="2" />
+				<mahApps:TransitioningContentControl x:Name="Zone3"
+													 Transition="RightTransition"
+													 Grid.Row="2" />
+				<mahApps:TransitioningContentControl x:Name="Zone4"
+													 Grid.Row="2"
+													 Transition="LeftTransition"
+													 Grid.Column="2" />
 			</Grid>
 		</Grid>
 	</Border>
-</controls:MetroWindow>
+</mahApps:MetroWindow>
