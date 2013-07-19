@@ -15,6 +15,7 @@ namespace CaliburnMicro.Transitions
 		public ShellViewModel(Func<ZoneViewModel> zoneCreator)
 		{
 			this.zoneCreator = zoneCreator;
+			DisplayName = "Trying Caliburn.Micro and TransitioningContentControl from mahApps.Metro";
 		}
 
 		public async void StartTransitions()
