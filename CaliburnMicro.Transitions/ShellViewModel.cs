@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Caliburn.Micro;
 
 namespace CaliburnMicro.Transitions
@@ -16,14 +17,17 @@ namespace CaliburnMicro.Transitions
 			this.zoneCreator = zoneCreator;
 		}
 
-		protected override async void OnActivate()
+		public async void StartTransitions()
 		{
 			Zone1 = zoneCreator();
 			Zone1.ZoneNumber = 1;
+			await Task.Delay(1200);
 			Zone2 = zoneCreator();
 			Zone2.ZoneNumber = 2;
+			await Task.Delay(1200);
 			Zone3 = zoneCreator();
 			Zone3.ZoneNumber = 3;
+			await Task.Delay(1200);
 			Zone4 = zoneCreator();
 			Zone4.ZoneNumber = 4;
 		}
