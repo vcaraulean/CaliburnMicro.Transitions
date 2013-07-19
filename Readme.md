@@ -8,4 +8,4 @@ Using:
 
 ## Screenshot
 
-![Screenshot](Screenshot.png)
+![Screenshot](https://raw.github.com/vcaraulean/CaliburnMicro.Transitions/master/Screenshot.PNG)
