@@ -1,7 +1,10 @@
 ## What is it
 
-Demonstrates how to use screen zones and displaying animation when zones are created/activated.
-
+A small WPF application that demonstrates the use of `TransitioningContentControl` with `Caliburn.Micro`:
+ - screed divided in few zones/areas
+ - each area displaying a user control, baked by it's view model.
+ - animation is displayed when child areas are created & activated.
+ 
 Using:
  - Caliburn.Micro
  - MahApps.Metro (for TransitioningContentControl)

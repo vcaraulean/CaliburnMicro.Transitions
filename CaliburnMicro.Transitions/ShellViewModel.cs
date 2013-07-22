@@ -18,7 +18,18 @@ namespace CaliburnMicro.Transitions
 			DisplayName = "Trying Caliburn.Micro and TransitioningContentControl from mahApps.Metro";
 		}
 
+		protected override async void OnActivate()
+		{
+			await Task.Delay(2000);
+			await StartTransitionsAsync();
+		}
+
 		public async void StartTransitions()
+		{
+			await StartTransitionsAsync();
+		}
+
+		private async Task StartTransitionsAsync()
 		{
 			if (Zone1 != null)
 			{

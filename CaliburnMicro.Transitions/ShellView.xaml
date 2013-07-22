@@ -37,6 +37,8 @@
 					<LineBreak />
 					<LineBreak />
 					<Run Text="Caliburn.Micro" />
+					<LineBreak />
+					<Run Text="MahApps.Metro" />
 					<Run Text="TransitioningContentControl" />
 					</TextBlock>
 				</Border>
